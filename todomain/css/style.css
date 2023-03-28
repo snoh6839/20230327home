@@ -11,6 +11,7 @@ body {
 
 nav {
     display: flex;
+    flex-direction: column;
     align-items: center;
     width: 200px;
     height: 90vh;
@@ -21,8 +22,48 @@ nav {
     box-sizing: border-box;
 }
 
+nav input {
+    display: none;
+} 
 
-.main-section {
+/* 2. tab 메뉴 부분 디자인 */
+nav input {
+    display: none;
+}  
+
+nav label {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+nav label:hover {
+    cursor: pointer; 
+}
+
+nav input:checked + label {
+    font-weight: bold;
+}
+
+/* 3. tab 내용 부분 디자인 */
+.tab-content {
+    width: 100%; /*부모 div width와 같은 width를 가진다.*/
+    height: 500px;
+    display: none; /*기본 값일땐 화면에 표시하지 않음. 체크 상태일 때, 화면에 표시되어야 함 */
+    border-top: 2px solid rgba(200, 200, 200, 0.534);/*탭 메뉴와 내용구분선*/
+}
+
+
+/* input 태그가 체크 상태일떼, 이에 대응하는 content?를 display에 표시하도록 설정 */
+#home:checked ~ #content1,
+#mytask:checked ~ #content2,
+#addtask:checked ~ #content3,
+#calendar:checked ~ #content4 {
+  display: flex;
+}
+
+
+#home:checked ~ .main-section {
     display: flex;
     flex-direction: column;
     justify-content: center;

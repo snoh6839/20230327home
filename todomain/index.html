@@ -8,17 +8,19 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <aside>
-        <nav>
-            <ul>
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">My Tasks</a></li>
-                <li><a href="#">Add Task</a></li>
-                <li><a href="#">Calendar</a></li>
-            </ul>
-        </nav>
-    </aside>
-    <main class="main-section">
+    
+    <nav>
+            <input type="radio" name="menuBar" id="home" class="active" checked>
+            <label for="home">Home</label>
+            <input type="radio" name="menuBar" id="mytask" class="">
+            <label for="mytask">My Task</label>
+            <input type="radio" name="menuBar" id="addtask" class="">
+            <label for="addtask">Add Task</label>
+            <input type="radio" name="menuBar" id="calendar" class="">
+            <label for="calendar">Calendar</label>
+    </nav>
+    <main class="tab-content">
+        <section  id="content1">
             <div class="wrapper">
                 <div class="greeting">
                     <h2>Welcome back, [username]!</h2>
